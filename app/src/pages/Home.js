@@ -1,11 +1,10 @@
 import React from "react";
-import Hero from "../components/HeroSection"; // Importing Hero section
+import Carousel from "../components/Carousel";
 
 function Home() {
   return (
     <div>
-      <Hero /> {/* Hero Section */}
-      {/* Other sections of the Home page */}
+      <Carousel />
     </div>
   );
 }
