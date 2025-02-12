@@ -1,34 +1,43 @@
-/* Navbar styles with Indian jersey colors */
+/* Transparent Navbar with Indian Jersey Blue Gradient */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     color: white;
-    background: linear-gradient(90deg, #0078FF, #FF9933);
+    background: linear-gradient(190deg, #0038A8, #1A73E8, #4A90E2); /* Dark to Light Blue Gradient */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .logo h2 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo h2 {
     margin: 0;
     font-size: 26px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-  }
-  
-  .nav-links {
+    color: white;
+}
+
+/* Navbar Links */
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
-  }
-  
-  .nav-links li {
+}
+
+.nav-links li {
     display: inline;
-  }
-  
-  .nav-links a {
+}
+
+/* Default link styles */
+.nav-links a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -36,10 +45,94 @@
     transition: 0.3s;
     padding: 8px 12px;
     border-radius: 5px;
-  }
-  
-  .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: #0078FF;
-  }
-  
+    position: relative;
+}
+
+/* Hover effect - Gradient text */
+.nav-links a:hover {
+    background: linear-gradient(90deg, #ffd45d, #ffffff, #79ff62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Active link (when clicked) */
+.nav-links a.active {
+    background: linear-gradient(190deg, #0038A8, #1A73E8, #4A90E2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #0038A8, #1A73E8, #4A90E2); /* Blue Gradient */
+        flex-direction: column;
+        display: none;
+        text-align: center;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+
+/***Hero**/
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px; /* Adjust this based on navbar height */
+  background: white; /* Indian jersey blue gradient */
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  text-decoration: none;
+  background: white;
+  color: #0033A0;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #ff9933; /* Saffron color for hover effect */
+  color: white;
+}

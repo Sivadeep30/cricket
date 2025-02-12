@@ -1,10 +1,11 @@
 import React from "react";
+import Hero from "../components/HeroSection"; // Importing Hero section
 
 function Home() {
   return (
     <div>
-      <h1>Latest News & Updates</h1>
-      <p>Stay updated with the latest Indian Cricket Team news!</p>
+      <Hero /> {/* Hero Section */}
+      {/* Other sections of the Home page */}
     </div>
   );
 }

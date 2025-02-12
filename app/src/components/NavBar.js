@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles.css"; // Import global styles
+import "../styles.css";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="logo">
         <h2>🇮🇳 Indian Cricket</h2>
       </div>
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/players">Players</Link></li>
-        <li><Link to="/merchandise">Merchandise</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/admin">Admin</Link></li>
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </div>
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+        <li><Link to="/players" onClick={() => setMenuOpen(false)}>Players</Link></li>
+        <li><Link to="/merchandise" onClick={() => setMenuOpen(false)}>Merchandise</Link></li>
+        <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+        <li><Link to="/admin" onClick={() => setMenuOpen(false)}>Admin</Link></li>
       </ul>
     </nav>
   );
