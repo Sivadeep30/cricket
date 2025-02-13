@@ -4,6 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles.css"; 
 import IndiaImage from '../image/2024.png';
+import IndiaImagee from '../image/2013.png';
+import IndiaImageee from '../image/2011.png';
+import IndiaImageeee from '../image/2007.png';
+import IndiaImageeeee from '../image/1983.png';
+
+
 
 
 
@@ -22,10 +28,10 @@ function Carousel() {
     <div className="carousel-container">
       <Slider {...settings}>
         <div><img src={IndiaImage} alt="Slide 1" /></div>
-        <div><img src="/images/image2.jpg" alt="Slide 2" /></div>
-        <div><img src="/images/image3.jpg" alt="Slide 3" /></div>
-        <div><img src="/images/image4.jpg" alt="Slide 4" /></div>
-        <div><img src="/images/image5.jpg" alt="Slide 5" /></div>
+        <div><img src={IndiaImagee} alt="Slide 2" /></div>
+        <div><img src={IndiaImageee} alt="Slide 3" /></div>
+        <div><img src={IndiaImageeee} alt="Slide 4" /></div>
+        <div><img src={IndiaImageeeee} alt="Slide 5" /></div>
       </Slider>
     </div>
   );
