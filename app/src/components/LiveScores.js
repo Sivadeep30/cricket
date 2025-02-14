@@ -9,7 +9,7 @@ const LiveScores = () => {
     const fetchMatches = async () => {
       try {
         const response = await axios.get(
-          "https://api.cricapi.com/v1/currentMatches?apikey=f76f722f-db89-433e-a156-7f335bb6a567&offset=0"
+          "https://api.cricapi.com/v1/currentMatches?apikey=&offset=0"
         );
   
         console.log("API Response:", response.data); // Debugging
