@@ -21,7 +21,7 @@ function Carousel() {
     slidesToShow: 1, // Change to show multiple images if needed
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 1500
   };
 
   return (

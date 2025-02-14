@@ -120,3 +120,112 @@
   .carousel-container {
     margin-top: 100px; /* Adjust based on navbar height */
 }
+
+
+/****livescores****/
+.live-scores-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .live-scores-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .match-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .match-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .match-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .match-details {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .match-score {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .matches-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  
+    .live-scores-title {
+      font-size: 20px;
+    }
+  
+    .match-title {
+      font-size: 16px;
+    }
+  
+    .match-score {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .live-scores-container {
+      padding: 10px;
+    }
+  
+    .match-card {
+      padding: 10px;
+    }
+  
+    .match-title {
+      font-size: 14px;
+    }
+  
+    .match-score {
+      font-size: 12px;
+    }
+  }
+  
+  
+  /* Limit Scorecards to 3 */
+  
+
+  .team-flag {
+    width: 25px;
+    height: 20px;
+    margin: 0 5px;
+    vertical-align: middle;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+
+  
+  
