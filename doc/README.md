@@ -17,7 +17,7 @@
      - Players Profile  
 1. About  
      - About the team
-1. Purchase  
+1. Merchandise
      - Purchase from the team
 ## Images
 
